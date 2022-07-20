@@ -36,3 +36,74 @@
     transform: rotate(360deg);
   }
 }
+
+body {
+  padding: 2ch;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 2ch;
+}
+
+h2 {
+  text-align: left;
+  margin-top: 3ch;
+  margin-bottom: 0.4ch;
+}
+
+#TextField {
+  text-align: left;
+  font-size: 3.5ch;
+  border-bottom: 2ch;
+}
+
+#NumberField {
+  text-align: left;
+  font-size: 3.5ch;
+  border-bottom: 2ch;
+}
+
+.flex-container {
+  border: 5ch;
+  padding: 2ch;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-container > div {
+  margin: 0.5ch;
+  text-align: center;
+  line-height: normal;
+}
+
+.flex-edu {
+  /* border: 3ch; */
+  padding: 2ch;
+  display: flex;
+  justify-content: left;
+  align-items: flex-start;
+}
+
+.flex-edu > div {
+  margin: 0.5ch;
+  width: 400px;
+  text-align: left;
+  line-height: normal;
+  color: black;
+}
+
+.flex-date {
+  display: flex;
+  text-align: left;
+}
+
+.flex-date > div {
+  margin-right: 0.5ch;
+  text-align: left;
+}
+
+td {
+  text-align: left;
+}
