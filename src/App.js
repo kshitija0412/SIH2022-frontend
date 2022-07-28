@@ -1,28 +1,31 @@
 import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import CollegeProfile from "./Components/Profile Components/CollegeProfile";
 import FacultyProfile from "./Components/Profile Components/FacultyProfile";
+import Faculty from "./Components/Display Profile/Faculty";
+import College from "./Components/Display Profile/College";
+import Layout from "./Components/Layout";
+import Grievance from "./Components/Grievance/Grievance";
+import PostGrievance from "./Components/Grievance/PostGrievance";
+import TrackGrievance from "./Components/Grievance/TrackGrievance"
 
 function App() {
 	return (
 		<>
-			<div className="App">
-				<FacultyProfile />
-				{/* <CollegeProfile /> */}
-				{/* <div className="flex-container">
-				<div>
-					<Button variant="outline" color="black" onClick={prevStep}>
-					<Button component="a" href="#" variant="outline" leftIcon={<ExternalLink size={14} />}>
-						Faculty Profile
-					</Button>
-				</div>
-				<div>
-					<Button variant="outline" color="black" onClick={nextStep}>
-						College Profile
-					</Button>
-				</div>
-			</div> */}
-			</div>
+			<BrowserRouter>
+				<Routes>
+					<Route path="/" element={<Layout />}>
+					<Route path="faculty" element={<Faculty />} />
+						<Route path="college" element={<College />} />
+						<Route path="facultyProfile" element={<FacultyProfile />} />
+						<Route path="collegeProfile" element={<CollegeProfile />} />
+						<Route path="grievance" element={<Grievance />} />
+						<Route path="postGrievance" element={<PostGrievance />} />
+						<Route path="trackGrievance" element={<TrackGrievance />} />
+					</Route>
+				</Routes>
+			</BrowserRouter>
 		</>
 	);
 }

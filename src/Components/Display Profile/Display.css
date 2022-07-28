@@ -1,0 +1,33 @@
+.displayImage {
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+}
+
+h2 {
+	margin-bottom: 1ch;
+	margin-top: 0.5ch;
+}
+
+.box {
+	width: 80%;
+	margin: 2ch;
+}
+
+.boxl {
+	margin: 2ch;
+	margin-bottom: 5ch;
+    padding-bottom: 4ch;
+}
+
+.boxg {
+	margin: 2ch;
+	margin-bottom: 1ch;
+    padding-bottom: 4ch;
+}
+
+.flex-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

@@ -1,7 +1,8 @@
 import React from "react";
-import { TextInput, Select, Textarea } from "@mantine/core";
+import { TextInput, Select, Textarea, Text } from "@mantine/core";
 import { ChevronDown } from "tabler-icons-react";
 import { DatePicker } from "@mantine/dates";
+import DocDropzone from "./DocDropzone";
 
 function Experience() {
 	return (
@@ -46,6 +47,10 @@ function Experience() {
 			</div>
 			<div id="TextField">
 				<Textarea label="Description" required />
+			</div>
+			<div id="TextField">
+				<Text>Upload your Resume</Text>
+				<DocDropzone />
 			</div>
 		</>
 	);

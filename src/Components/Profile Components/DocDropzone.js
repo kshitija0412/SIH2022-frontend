@@ -1,25 +1,33 @@
 import React from 'react';
-import { useRef } from 'react';
-import { Button, Group } from '@mantine/core';
 import { Dropzone, MIME_TYPES } from '@mantine/dropzone';
 
 function DocDropzone() {
-    // const openRef = useRef<() => void> ();
-
-  return (
-        <>
-            <div>
-      <Dropzone openRef={openRef} accept={[application/pdf, application/msword]}>
-        {/* children */}
-      </Dropzone>
-
-      <Group position="center" mt="md">
-        <Button onClick={() => openRef.current()}>Select files</Button>
-      </Group>
-      </div>
-    </>
-
-  )
+  const Standard = () => {
+    const getUploadParams = () => {
+      return { url: 'https://httpbin.org/post' }
+    }
+  
+    const handleChangeStatus = ({ meta }, status) => {
+      console.log(status, meta)
+    }
+  
+    const handleSubmit = (files, allFiles) => {
+      console.log(files.map(f => f.meta))
+      allFiles.forEach(f => f.remove())
+    }
+  
+    return (
+      <>
+      <Dropzone
+        getUploadParams={getUploadParams}
+        onChangeStatus={handleChangeStatus}
+        onSubmit={handleSubmit}
+        styles={{ dropzone: { minHeight: 200, maxHeight: 250 } }}
+      />
+      </>
+    )
+  }
 }
+
 
 export default DocDropzone;

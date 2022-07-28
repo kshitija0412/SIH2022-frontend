@@ -1,67 +1,135 @@
 import React from "react";
-import { TextInput, Table, Select, NumberInput } from "@mantine/core";
+import {
+	TextInput,
+	Select,
+	NumberInput,
+	Box,
+	MantineProvider
+} from "@mantine/core";
 import { ChevronDown } from "tabler-icons-react";
 import { DatePicker } from "@mantine/dates";
+
+// import DocDropzone from "./DocDropzone";
+// import DeleteModal from "./DeleteModal";
 // import DelModal from "./DelModal";
 
 function Education() {
-	const elements = [
-		{
-			No: 1,
-			Qualifications: "BE",
-			Stream: "Engineering",
-			Course: "EXTC",
-			Institute: "VIT",
-			Board: "MU",
-			Admission: "14/07/2019",
-			Passing: "14/06/2023",
-			Percentage: "82",
-		},
-		{
-			No: 2,
-			Qualifications: "BE",
-			Stream: "Engineering",
-			Course: "CMPN",
-			Institute: "SPIT",
-			Board: "MU",
-			Admission: "14/07/2019",
-			Passing: "14/06/2023",
-			Percentage: "82",
-		},
-		{
-			No: 3,
-			Qualifications: "BE",
-			Stream: "Engineering",
-			Course: "EXTC",
-			Institute: "RAIT",
-			Board: "MU",
-			Admission: "14/07/2019",
-			Passing: "14/06/2023",
-			Percentage: "82",
-		},
-	];
-	const rows = elements.map((element) => (
-		<tr key={element.name}>
-			<td>{element.No}</td>
-			<td>{element.Qualifications}</td>
-			<td>{element.Stream}</td>
-			<td>{element.Course}</td>
-			<td>{element.Institute}</td>
-			<td>{element.Board}</td>
-			<td>{element.Admission}</td>
-			<td>{element.Passing}</td>
-			<td>{element.Percentage}</td>
-			<td>{element.Document}</td>
-			<td>{element.Delete}</td>
-		</tr>
-	));
-
 	return (
 		<>
 			<div>
 				<h2>Education Details</h2>
 			</div>
-			<div className="flex-edu">
+
+			<Box
+				sx={(theme) => ({
+					backgroundColor:
+						theme.colorScheme === "dark"
+							? theme.colors.dark[6]
+							: theme.colors.gray[0],
+					textAlign: "center",
+					padding: theme.spacing.xl,
+					borderRadius: theme.radius.md,
+					cursor: "pointer",
+
+					"&:hover": {
+						backgroundColor:
+							theme.colorScheme === "dark"
+								? theme.colors.dark[5]
+								: theme.colors.gray[1],
+					},
+				})}
+			>
+				<MantineProvider
+					withGlobalStyles
+					withNormalizeCSS
+					theme={{
+						breakpoints: {
+							xs: 200,
+							sm: 400,
+							md: 700,
+							lg: 1200,
+							xl: 1800,
+						},
+					}}
+				>
+				
+				</MantineProvider>
+
+				<div id="TextField">
+				<Select
+					label="Qualification Level"
+					placeholder="Please Select"
+					rightSection={<ChevronDown size={14} />}
+					rightSectionWidth={30}
+					styles={{ rightSection: { pointerEvents: "none" } }}
+					data={[
+						"Please Select",
+						"SSC",
+						"HSC",
+						"Graduate",
+						"Post-Graduate",
+						"Doctorate",
+						"Post-Doctorate",
+					]}
+					required
+				/>
+			</div>
+			<div id="TextField">
+				<Select
+					label="Stream"
+					placeholder="Please Select"
+					rightSection={<ChevronDown size={14} />}
+					rightSectionWidth={30}
+					styles={{ rightSection: { pointerEvents: "none" } }}
+					data={[
+						"Please Select",
+						"Computer Science Engineering",
+						"Information Technology Engineering",
+						"Electronics and Telecommunication Engineering",
+						"Electronics Engineering",
+						"Biomedical Engineering",
+					]}
+					required
+				/>
+				</div>
+				<div id="TextField">
+				<TextInput label="Completed" required />
+				</div> 
+
+				<div id="TextField">
+				<TextInput label="Institute State" required />
+				</div> 
+				<div id="TextField">
+				<TextInput label="Institute District" required />
+				</div> 
+				<div id="TextField">
+				<TextInput label="Institute Taluka" required />
+				</div> 
+				<div id="TextField">
+				<TextInput label="College Name/School Name" required />
+				</div> 
+				<div id="TextField">
+				<Select
+					label="Course"
+					placeholder="Please Select"
+					rightSection={<ChevronDown size={14} />}
+					rightSectionWidth={30}
+					styles={{ rightSection: { pointerEvents: "none" } }}
+					data={[
+						"Please Select",
+						"Computer Science Engineering",
+						"Information Technology Engineering",
+						"Electronics and Telecommunication Engineering",
+						"Electronics Engineering",
+						"Biomedical Engineering",
+					]}
+					required
+				/>
+				</div>
+				<div id="TextField">
+				<TextInput label="Board/University" required />
+				</div>
+
 				<div id="TextField">
 					<Select
 						label="Mode"
@@ -96,29 +164,16 @@ function Education() {
 				<div id="NumberField">
 					<NumberInput label="Attempts" />
 				</div>
-				<div>
-					{/* <DelModal /> */}
+				{/* <div id="TextField">
+					Upload your Marksheet
+					<DocDropzone />
 				</div>
-			</div>
-
-			<Table>
-				<thead>
-					<tr>
-						<th>Sr. No. </th>
-						<th>Qualifications</th>
-						<th>Stream</th>
-						<th>Course</th>
-						<th>Institute</th>
-						<th>Board/University</th>
-						<th>Admission Year</th>
-						<th>Passing Year</th>
-						<th>Percentage/CGPA</th>
-						<th>Document</th>
-						<th>Delete</th>
-					</tr>
-				</thead>
-				<tbody>{rows}</tbody>
-			</Table>
+				<div id="TextField">
+					Delete your file
+					<DeleteModal />
+				</div> */}
+			</Box>
+			{/* <EducationDisplay /> */}
 		</>
 	);
 }
