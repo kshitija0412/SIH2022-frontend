@@ -1,6 +1,6 @@
 import React from "react";
 import { ChevronDown } from "tabler-icons-react";
-import { TextInput, Select } from "@mantine/core";
+import { TextInput, Select, Box } from "@mantine/core";
 
 function Affiliation() {
 	return (
@@ -8,6 +8,26 @@ function Affiliation() {
 			<div>
 				<h2>Type of Affiliation</h2>
 			</div>
+			<Box
+				sx={(theme) => ({
+					backgroundColor:
+						theme.colorScheme === "dark"
+							? theme.colors.dark[6]
+							: theme.colors.gray[0],
+					textAlign: "center",
+					padding: theme.spacing.xl,
+					borderRadius: theme.radius.md,
+					cursor: "pointer",
+
+					"&:hover": {
+						backgroundColor:
+							theme.colorScheme === "dark"
+								? theme.colors.dark[5]
+								: theme.colors.gray[1],
+					},
+				})}
+				style= {{padding: "5px 24px 24px 24px"}} 
+			>
 			<div id="TextField">
 				<Select
 					label="Type of Affiliation"
@@ -32,6 +52,7 @@ function Affiliation() {
 					required
 				/>
 			</div>
+			</Box>
 		</>
 	);
 }

@@ -74,21 +74,37 @@ export default function BasicTable() {
 				<h2>Education Details</h2>
 			</div>
 
-			<TableContainer component={Paper}>
-				<Table aria-label="simple table">
+			<TableContainer component={Paper} className="displayTable">
+				<Table>
 					<TableHead>
 						<TableRow>
-							<TableCell>Sr. No. </TableCell>
-							<TableCell>Qualifications</TableCell>
-							<TableCell>Stream</TableCell>
-							<TableCell>Course</TableCell>
-							<TableCell>Institute</TableCell>
-							<TableCell>Board/University</TableCell>
-							<TableCell>Admission Year</TableCell>
-							<TableCell>Passing Year</TableCell>
-							<TableCell>Percentage/CGPA</TableCell>
-							{/* <TableCell>Document</TableCell>
-							<TableCell>Delete</TableCell> */}
+							<TableCell>
+								<b>Sr. No. </b>
+							</TableCell>
+							<TableCell>
+								<b>Qualifications</b>
+							</TableCell>
+							<TableCell>
+								<b>Stream</b>
+							</TableCell>
+							<TableCell>
+								<b>Course</b>
+							</TableCell>
+							<TableCell>
+								<b>Institute</b>
+							</TableCell>
+							<TableCell>
+								<b>Board/University</b>
+							</TableCell>
+							<TableCell>
+								<b>Admission Year</b>
+							</TableCell>
+							<TableCell>
+								<b>Passing Year</b>
+							</TableCell>
+							<TableCell>
+								<b>Percentage/CGPA</b>
+							</TableCell>
 						</TableRow>
 					</TableHead>
 					<TableBody>
@@ -97,7 +113,6 @@ export default function BasicTable() {
 								key={row.name}
 								sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
 							>
-								
 								<TableCell>{row.no}</TableCell>
 								<TableCell>{row.qualifications}</TableCell>
 								<TableCell>{row.stream}</TableCell>

@@ -1,5 +1,5 @@
 import React from "react";
-import { TextInput, NumberInput } from "@mantine/core";
+import { TextInput, NumberInput, Box } from "@mantine/core";
 
 function Location() {
 	return (
@@ -7,6 +7,26 @@ function Location() {
 			<div>
 				<h2>Location Details</h2>
 			</div>
+			<Box
+				sx={(theme) => ({
+					backgroundColor:
+						theme.colorScheme === "dark"
+							? theme.colors.dark[6]
+							: theme.colors.gray[0],
+					textAlign: "center",
+					padding: theme.spacing.xl,
+					borderRadius: theme.radius.md,
+					cursor: "pointer",
+
+					"&:hover": {
+						backgroundColor:
+							theme.colorScheme === "dark"
+								? theme.colors.dark[5]
+								: theme.colors.gray[1],
+					},
+				})}
+				style= {{padding: "5px 24px 24px 24px"}} 
+			>
 			<div id="TextField">
 				<TextInput placeholder="State" label="State" required />
 			</div>
@@ -19,6 +39,7 @@ function Location() {
 			<div id="NumberField">
 				<NumberInput hideControls label="Pincode" required />
 			</div>
+			</Box>
 		</>
 	);
 }

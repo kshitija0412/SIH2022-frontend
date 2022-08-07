@@ -52,16 +52,16 @@ export default function BasicTable() {
 				<h2>Papers Published</h2>
 			</div>
 
-			<TableContainer component={Paper}>
+			<TableContainer component={Paper} className="displayTable">
 				<Table aria-label="simple table">
 					<TableHead>
 						<TableRow>
-							<TableCell>Sr. No. </TableCell>
-							<TableCell>Publication Year</TableCell>
-							<TableCell>Domain</TableCell>
-							<TableCell>Journal/Conference</TableCell>
-							<TableCell>Co-Authors</TableCell>
-							<TableCell>Description</TableCell>
+							<TableCell><b>Sr. No. </b></TableCell>
+							<TableCell><b>Publication Year</b></TableCell>
+							<TableCell><b>Domain</b></TableCell>
+							<TableCell><b>Journal/Conference</b></TableCell>
+							<TableCell><b>Co-Authors</b></TableCell>
+							<TableCell><b>Description</b></TableCell>
 						</TableRow>
 					</TableHead>
 					<TableBody>

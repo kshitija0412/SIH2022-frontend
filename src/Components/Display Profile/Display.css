@@ -1,3 +1,9 @@
+#TextField {
+	text-align: left;
+	font-size: 3.5ch;
+	border-bottom: 3ch;
+}
+
 .displayImage {
 	display: flex;
 	align-items: flex-end;
@@ -10,24 +16,39 @@ h2 {
 }
 
 .box {
-	width: 80%;
 	margin: 2ch;
+	align-items: center;
 }
 
 .boxl {
 	margin: 2ch;
 	margin-bottom: 5ch;
-    padding-bottom: 4ch;
+	padding-bottom: 4ch;
+	align-items: center;
 }
 
 .boxg {
 	margin: 2ch;
 	margin-bottom: 1ch;
-    padding-bottom: 4ch;
+	padding-bottom: 4ch;
+	align-items: center;
 }
 
 .flex-container {
+	border: 5ch;
+	padding: 2ch;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+.flex-container > div {
+	margin: 0.5ch;
+	text-align: center;
+	line-height: normal;
+}
+
+.displayTable {
+	margin-top: 3ch;
+	margin-bottom: 3ch;
 }

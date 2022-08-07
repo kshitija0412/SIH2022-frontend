@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@mantine/core";
-import "../Display Profile/Display.css"
+import "../Display Profile/Display.css";
 
 function Grievance() {
 	return (
@@ -12,7 +12,7 @@ function Grievance() {
 						Post Grievance
 					</Button>
 				</div>
-				<div className="flex-container">
+				<div>
 					<Button component={Link} to="/trackGrievance">
 						Track Grievance
 					</Button>

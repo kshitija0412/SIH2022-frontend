@@ -1,6 +1,5 @@
 import React from "react";
-import { TextInput } from "@mantine/core";
-import { NumberInput } from "@mantine/core";
+import { TextInput, NumberInput, Box } from "@mantine/core";
 
 function Demographic() {
 	return (
@@ -8,6 +7,26 @@ function Demographic() {
 			<div>
 				<h2>Demographic Details</h2>
 			</div>
+			<Box
+				sx={(theme) => ({
+					backgroundColor:
+						theme.colorScheme === "dark"
+							? theme.colors.dark[6]
+							: theme.colors.gray[0],
+					textAlign: "center",
+					padding: theme.spacing.xl,
+					borderRadius: theme.radius.md,
+					cursor: "pointer",
+
+					"&:hover": {
+						backgroundColor:
+							theme.colorScheme === "dark"
+								? theme.colors.dark[5]
+								: theme.colors.gray[1],
+					},
+				})}
+				style= {{padding: "5px 24px 24px 24px"}} 
+			>
 			<div id="NumberField">
 				<NumberInput hideControls label="Family Income" required />
 			</div>
@@ -20,6 +39,7 @@ function Demographic() {
 			<div id="TextField">
 				<TextInput label="Sub category" />
 			</div>
+			</Box>
 		</>
 	);
 }

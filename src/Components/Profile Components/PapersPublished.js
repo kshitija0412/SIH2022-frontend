@@ -25,6 +25,7 @@ function PapersPublished() {
 								: theme.colors.gray[1],
 					},
 				})}
+				style= {{padding: "5px 24px 24px 24px"}} 
 			>
 				<div id="TextField">
 					<TextInput label="Year of Publication" required />
@@ -56,7 +57,6 @@ function PapersPublished() {
 					/>
 				</div>
 			</Box>
-			{/* <PapersPublishedDisplay /> */}
 		</>
 	);
 }

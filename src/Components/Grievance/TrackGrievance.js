@@ -51,11 +51,11 @@ export default function BasicTable() {
 				<Table aria-label="simple table">
 					<TableHead>
 						<TableRow>
-							<TableCell>Grievance ID </TableCell>
-							<TableCell>Date of issue</TableCell>
-							<TableCell>Grievance Category</TableCell>
-							<TableCell>Action Taken</TableCell>
-							<TableCell>Status</TableCell>
+							<TableCell><b>Grievance ID </b></TableCell>
+							<TableCell><b>Date of issue</b></TableCell>
+							<TableCell><b>Grievance Category</b></TableCell>
+							<TableCell><b>Action Taken</b></TableCell>
+							<TableCell><b>Status</b></TableCell>
 						</TableRow>
 					</TableHead>
 					<TableBody>

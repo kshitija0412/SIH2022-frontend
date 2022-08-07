@@ -1,109 +1,58 @@
 .App {
-  text-align: center;
+	text-align: center;
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+	height: 40vmin;
+	pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+	.App-logo {
+		animation: App-logo-spin infinite 20s linear;
+	}
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+	background-color: #282c34;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: calc(10px + 2vmin);
+	color: white;
 }
 
 .App-link {
-  color: #61dafb;
+	color: #61dafb;
 }
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
 }
 
 body {
-  padding: 2ch;
-}
-
-h1 {
-  text-align: center;
-  margin-bottom: 2ch;
-}
-
-h2 {
-  text-align: left;
-  margin-top: 3ch;
-  margin-bottom: 0.4ch;
-}
-
-#TextField {
-  text-align: left;
-  font-size: 3.5ch;
-  border-bottom: 2ch;
-}
-
-#NumberField {
-  text-align: left;
-  font-size: 3.5ch;
-  border-bottom: 2ch;
-}
-
-.flex-container {
-  border: 5ch;
-  padding: 2ch;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.flex-container > div {
-  margin: 0.5ch;
-  text-align: center;
-  line-height: normal;
-}
-
-.flex-edu {
-  /* border: 3ch; */
-  padding: 2ch;
-  display: flex;
-  justify-content: left;
-  align-items: flex-start;
-}
-
-.flex-edu > div {
-  margin: 0.5ch;
-  width: 400px;
-  text-align: left;
-  line-height: normal;
-  color: black;
-}
-
-.flex-date {
-  display: flex;
-  text-align: left;
-}
-
-.flex-date > div {
-  margin-right: 0.5ch;
-  text-align: left;
+	padding: 2ch;
 }
 
 td {
-  text-align: left;
+	text-align: left;
 }
+
+/* .delete {
+	text-align: left;
+	display: inline-block;
+	margin-top: 2ch;
+	margin-bottom: 4px;
+	font-size: 14px;
+	font-weight: 500;
+	color: #212529;
+	word-break: break-word;
+	cursor: default;
+} */

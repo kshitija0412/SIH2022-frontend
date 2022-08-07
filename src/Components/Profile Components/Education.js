@@ -1,17 +1,15 @@
 import React from "react";
 import {
 	TextInput,
+	Text,
 	Select,
 	NumberInput,
 	Box,
-	MantineProvider
+	MantineProvider,
 } from "@mantine/core";
 import { ChevronDown } from "tabler-icons-react";
 import { DatePicker } from "@mantine/dates";
-
-// import DocDropzone from "./DocDropzone";
-// import DeleteModal from "./DeleteModal";
-// import DelModal from "./DelModal";
+import UploadDelete from "./UploadDelete";
 
 function Education() {
 	return (
@@ -38,6 +36,7 @@ function Education() {
 								: theme.colors.gray[1],
 					},
 				})}
+				style= {{padding: "5px 24px 24px 24px"}} 
 			>
 				<MantineProvider
 					withGlobalStyles
@@ -51,83 +50,75 @@ function Education() {
 							xl: 1800,
 						},
 					}}
-				>
-				
-				</MantineProvider>
+				></MantineProvider>
 
 				<div id="TextField">
-				<Select
-					label="Qualification Level"
-					placeholder="Please Select"
-					rightSection={<ChevronDown size={14} />}
-					rightSectionWidth={30}
-					styles={{ rightSection: { pointerEvents: "none" } }}
-					data={[
-						"Please Select",
-						"SSC",
-						"HSC",
-						"Graduate",
-						"Post-Graduate",
-						"Doctorate",
-						"Post-Doctorate",
-					]}
-					required
-				/>
-			</div>
-			<div id="TextField">
-				<Select
-					label="Stream"
-					placeholder="Please Select"
-					rightSection={<ChevronDown size={14} />}
-					rightSectionWidth={30}
-					styles={{ rightSection: { pointerEvents: "none" } }}
-					data={[
-						"Please Select",
-						"Computer Science Engineering",
-						"Information Technology Engineering",
-						"Electronics and Telecommunication Engineering",
-						"Electronics Engineering",
-						"Biomedical Engineering",
-					]}
-					required
-				/>
+					<Select
+						label="Qualification Level"
+						placeholder="Please Select"
+						rightSection={<ChevronDown size={14} />}
+						rightSectionWidth={30}
+						styles={{ rightSection: { pointerEvents: "none" } }}
+						data={[
+							"Please Select",
+							"SSC",
+							"HSC",
+							"Graduate",
+							"Post-Graduate",
+							"Doctorate",
+							"Post-Doctorate",
+						]}
+						required
+					/>
 				</div>
 				<div id="TextField">
-				<TextInput label="Completed" required />
-				</div> 
+					<Select
+						label="Stream"
+						placeholder="Please Select"
+						rightSection={<ChevronDown size={14} />}
+						rightSectionWidth={30}
+						styles={{ rightSection: { pointerEvents: "none" } }}
+						data={[
+							"Please Select",
+							"Computer Science Engineering",
+							"Information Technology Engineering",
+							"Electronics and Telecommunication Engineering",
+							"Electronics Engineering",
+							"Biomedical Engineering",
+						]}
+						required
+					/>
+				</div>
 
 				<div id="TextField">
-				<TextInput label="Institute State" required />
-				</div> 
-				<div id="TextField">
-				<TextInput label="Institute District" required />
-				</div> 
-				<div id="TextField">
-				<TextInput label="Institute Taluka" required />
-				</div> 
-				<div id="TextField">
-				<TextInput label="College Name/School Name" required />
-				</div> 
-				<div id="TextField">
-				<Select
-					label="Course"
-					placeholder="Please Select"
-					rightSection={<ChevronDown size={14} />}
-					rightSectionWidth={30}
-					styles={{ rightSection: { pointerEvents: "none" } }}
-					data={[
-						"Please Select",
-						"Computer Science Engineering",
-						"Information Technology Engineering",
-						"Electronics and Telecommunication Engineering",
-						"Electronics Engineering",
-						"Biomedical Engineering",
-					]}
-					required
-				/>
+					<TextInput label="Institute State" required />
 				</div>
 				<div id="TextField">
-				<TextInput label="Board/University" required />
+					<TextInput label="Institute District" required />
+				</div>
+				<div id="TextField">
+					<TextInput label="Institute Name" required />
+				</div>
+				<div id="TextField">
+					<Select
+						label="Course"
+						placeholder="Please Select"
+						rightSection={<ChevronDown size={14} />}
+						rightSectionWidth={30}
+						styles={{ rightSection: { pointerEvents: "none" } }}
+						data={[
+							"Please Select",
+							"Computer Science Engineering",
+							"Information Technology Engineering",
+							"Electronics and Telecommunication Engineering",
+							"Electronics Engineering",
+							"Biomedical Engineering",
+						]}
+						required
+					/>
+				</div>
+				<div id="TextField">
+					<TextInput label="Board/University" required />
 				</div>
 
 				<div id="TextField">
@@ -159,21 +150,28 @@ function Education() {
 					/>
 				</div>
 				<div id="NumberField">
-					<NumberInput hideControls label="Percentage" />
+					<NumberInput hideControls label="Percentage" required />
 				</div>
 				<div id="NumberField">
-					<NumberInput label="Attempts" />
-				</div>
-				{/* <div id="TextField">
-					Upload your Marksheet
-					<DocDropzone />
+					<NumberInput hideControls label="Attempts" required />
 				</div>
 				<div id="TextField">
-					Delete your file
-					<DeleteModal />
-				</div> */}
+					<Text
+						style={{
+							display: "inline-block",
+							marginBottom: "4px",
+							fontSize: "14px",
+							fontWeight: "500",
+							color: "#212529",
+							wordBreak: "break-word",
+							cursor: "default",
+						}} 
+					>
+						Upload your marksheet below <p style= {{color: "rgb(240,62,62)", display: "inline"}} >*</p>
+					</Text>
+					<UploadDelete />
+					</div>
 			</Box>
-			{/* <EducationDisplay /> */}
 		</>
 	);
 }
