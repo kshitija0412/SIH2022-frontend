@@ -1,0 +1,54 @@
+#TextField {
+	text-align: left;
+	font-size: 3.5ch;
+	border-bottom: 3ch;
+}
+
+.displayImage {
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+}
+
+h2 {
+	margin-bottom: 1ch;
+	margin-top: 0.5ch;
+}
+
+.box {
+	margin: 2ch;
+	align-items: center;
+}
+
+.boxl {
+	margin: 2ch;
+	margin-bottom: 5ch;
+	padding-bottom: 4ch;
+	align-items: center;
+}
+
+.boxg {
+	margin: 2ch;
+	margin-bottom: 1ch;
+	padding-bottom: 4ch;
+	align-items: center;
+}
+
+.displayTable {
+	margin-top: 3ch;
+	margin-bottom: 3ch;
+}
+
+.appTable {
+	margin: 1rem 2rem 1rem 15rem;
+}
+
+/* status: {
+	fontWeight: 'bold',
+	fontSize: '0.75rem',
+	color: 'white',
+	backgroundColor: 'grey',
+	borderRadius: 8,
+	padding: '0.2rem',
+	display: 'inline-block'
+} */
