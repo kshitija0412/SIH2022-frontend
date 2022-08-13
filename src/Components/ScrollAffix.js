@@ -16,7 +16,7 @@ function ScrollAffix() {
 					},
 				}}
 			>
-				<Affix position={{ bottom: 20, right: 20 }}>
+				<Affix position={{ bottom: 95, right: 15 }}>
 					<Transition transition="slide-up" mounted={scroll.y > 0}>
 						{(transitionStyles) => (
 							<Button
@@ -24,6 +24,7 @@ function ScrollAffix() {
 								style={transitionStyles}
 								onClick={() => scrollTo({ y: 0 })}
 								color="dark-teal"
+								position= "sticky"
 							>
 								Scroll to top
 							</Button>
