@@ -12,6 +12,7 @@ import TrackGrievance from "./Components/Grievance/TrackGrievance";
 import DepartmentDetails from "./Dashboard/DepartmentDetails";
 import FacultyDashboard from "./Dashboard/FacultyDashboard";
 import ApplicationStatus from "./Dashboard/ApplicationStatus";
+import PostJob from "./Components/Dashboard/PostJob";
 
 function App() {
 	return (
@@ -29,6 +30,7 @@ function App() {
 						<Route path="deptDetails" element={<DepartmentDetails />} />
 						<Route path="facultyDashboard" element={<FacultyDashboard />} />
 						<Route path="application" element={<ApplicationStatus />} />
+						<Route path="postJob" element={<PostJob />} />
 						{/* <Route path="changePass" element={<ChangePassword />} />
 						<Route path="facultySignout" element={<FacultySignout />} /> */}
 					</Route>

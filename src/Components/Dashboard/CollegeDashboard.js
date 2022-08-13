@@ -82,7 +82,7 @@ const buttons = [
 	<Button
 		key="five"
 		component={Link}
-		to={"/signOut"}
+		to={"/college"}
 		style={{
 			height: "5ch",
 			fontSize: "1.8ch",
