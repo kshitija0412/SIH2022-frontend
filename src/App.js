@@ -15,7 +15,8 @@ import ApplicationStatus from "./Components/Dashboard/ApplicationStatus";
 import LandingPage from "./Components/Pages/LandingPage";
 import PostJob from "./Components/Dashboard/PostJob";
 import CollegeDashboard from "./Components/Dashboard/CollegeDashboard";
-// import CollegeCM from "./Components/Card/CollegeCM";
+import CollegeCard from "./Components/Cards/CollegeCard/CollegeCard";
+import FacultyCard from "./Components/Cards/FacultyCard/FacultyCard";
 // import Signup from "./Components/Pages/Signup";
 
 function App() {
@@ -36,7 +37,8 @@ function App() {
 						<Route path="collegeDashboard" element={<CollegeDashboard />} />
 						<Route path="application" element={<ApplicationStatus />} />
 						<Route path="postJob" element={<PostJob />} />
-						{/* <Route path="collegeCard" element={<CollegeCard/>} /> */}
+						<Route path="collegeCard" element={<CollegeCard/>} />
+						<Route path="facultyCard" element={<FacultyCard/>} /> 
 						<Route path="home" element={<LandingPage />} />
 						{/* <Route path="signUp" element={<Signup />} /> */}
 						{/* <Route path="changePass" element={<ChangePassword />} />
