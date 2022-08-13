@@ -32,7 +32,7 @@ export default function PostJob() {
 
 	return (
 		<div>
-			<h2 style={{ margin: "1rem 1rem 1rem 15rem" }}>Post Job Openings</h2>
+			<h2 style={{ margin: "1rem 1rem 1rem 15rem" }}>Job Openings</h2>
 			<Box
 				sx={(theme) => ({
 					backgroundColor:

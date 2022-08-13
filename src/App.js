@@ -9,10 +9,14 @@ import Layout from "./Components/Layout";
 import Grievance from "./Components/Grievance/Grievance";
 import PostGrievance from "./Components/Grievance/PostGrievance";
 import TrackGrievance from "./Components/Grievance/TrackGrievance";
-import DepartmentDetails from "./Dashboard/DepartmentDetails";
-import FacultyDashboard from "./Dashboard/FacultyDashboard";
-import ApplicationStatus from "./Dashboard/ApplicationStatus";
+import DepartmentDetails from "./Components/Dashboard/DepartmentDetails";
+import FacultyDashboard from "./Components/Dashboard/FacultyDashboard";
+import ApplicationStatus from "./Components/Dashboard/ApplicationStatus";
+import LandingPage from "./Components/Pages/LandingPage";
 import PostJob from "./Components/Dashboard/PostJob";
+import CollegeDashboard from "./Components/Dashboard/CollegeDashboard";
+// import CollegeCM from "./Components/Card/CollegeCM";
+// import Signup from "./Components/Pages/Signup";
 
 function App() {
 	return (
@@ -29,8 +33,12 @@ function App() {
 						<Route path="trackGrievance" element={<TrackGrievance />} />
 						<Route path="deptDetails" element={<DepartmentDetails />} />
 						<Route path="facultyDashboard" element={<FacultyDashboard />} />
+						<Route path="collegeDashboard" element={<CollegeDashboard />} />
 						<Route path="application" element={<ApplicationStatus />} />
 						<Route path="postJob" element={<PostJob />} />
+						{/* <Route path="collegeCard" element={<CollegeCard/>} /> */}
+						<Route path="home" element={<LandingPage />} />
+						{/* <Route path="signUp" element={<Signup />} /> */}
 						{/* <Route path="changePass" element={<ChangePassword />} />
 						<Route path="facultySignout" element={<FacultySignout />} /> */}
 					</Route>
